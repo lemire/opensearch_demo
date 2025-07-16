@@ -1,4 +1,4 @@
-# Activité d'initiation à Elasticsearch avec Docker
+# Activité d'initiation à OpenSearch avec Docker
 
 
 OpenSearch est un moteur de recherche open-source, conçu pour gérer de grands volumes de données. Il permet des recherches sur le texte intégral, des agrégations complexes et des analyses en temps réel sur des ensembles de données hétérogènes, comme des logs, des documents ou des métriques. Il s'intègre facilement avec d'autres outils et langages de programmation. Ce moteur repose fondamentalement sur Apache Lucene, une bibliothèque open-source de recherche qui fournit les algorithmes de base pour l'indexation et la récupération d'informations.
@@ -175,7 +175,7 @@ docker compose down
 
 **Fichiers à disposition :**
 - Les PDF à indexer sont dans le dossier `data/`.
-- Le fichier `docker-compose.yml` pour lancer Elasticsearch
+- Le fichier `docker-compose.yml` pour lancer OpenSearch
 - Le script Python pour les requêtes : `query.py`
 - Le script Python d'indexation : `extract_and_index.py`
 
