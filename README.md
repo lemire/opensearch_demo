@@ -170,6 +170,9 @@ docker compose down
 
 ---
 
+## Elasticsearch
+
+Vous pouvez aussi faire cette activité avec Elasticsearch, voir https://github.com/lemire/elastic_demo
 
 
 
