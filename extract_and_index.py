@@ -1,4 +1,6 @@
 import os
+from urllib.parse import quote
+
 import requests
 from pdfminer.high_level import extract_text
 
@@ -12,7 +14,10 @@ def index_pdf(file_path):
         'filename': os.path.basename(file_path),
         'content': text
     }
-    resp = requests.post(f"{OPENSEARCH_URL}/{INDEX_NAME}/_doc", json=doc)
+    # Le nom du fichier sert d'identifiant : relancer le script remplace
+    # les documents existants au lieu de créer des doublons.
+    doc_id = quote(os.path.basename(file_path), safe='')
+    resp = requests.put(f"{OPENSEARCH_URL}/{INDEX_NAME}/_doc/{doc_id}", json=doc)
     print(f"Indexé {file_path}: {resp.status_code}")
 
 if __name__ == "__main__":

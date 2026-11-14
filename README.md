@@ -119,7 +119,7 @@ pip install -r requirements.txt
 Exécutez le script Python `extract_and_index.py` qui :
 - Parcourt le dossier `data/`
 - Extrait le texte de chaque PDF
-- Indexe le texte dans OpenSearch
+- Indexe le texte dans OpenSearch, en utilisant le nom du fichier comme identifiant du document : vous pouvez relancer le script sans créer de doublons (les documents existants sont remplacés).
 
 Lancez le script :
 
